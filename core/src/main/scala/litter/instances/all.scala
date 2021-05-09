@@ -28,6 +28,7 @@ trait AllInstances
     with FunctionInstances
     with IntInstances
     with LongInstances
+    with OptionInstances
     with SetInstances
     with ShortInstances
     with SortedSetInstances

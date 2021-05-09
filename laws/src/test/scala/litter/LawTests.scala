@@ -22,6 +22,7 @@ import litter.instances.all._
 import litter.laws.discipline.{
   BoundedZeroSemilatticeTests,
   CommutativeZeroGroupTests,
+  CommutativeZeroMonoidTests,
   ZeroMonoidTests,
   ZeroSemilatticeTests
 }
@@ -44,14 +45,22 @@ class LawTests extends Specification with Discipline with ScalaCheck {
       .map(i => Eq.by[Byte => A, A](f => f(i.toByte)))
       .reduce(Eq.and[Byte => A])
 
-  checkAll("ZeroMonoid[BigInt]", ZeroMonoidTests[BigInt].zeroMonoid)
-  checkAll("ZeroMonoid[BigInt]", SerializableTests.serializable(ZeroMonoid[BigInt]))
+  checkAll(
+    "CommutativeZeroMonoid[BigInt]",
+    CommutativeZeroMonoidTests[BigInt].commutativeZeroMonoid)
+  checkAll(
+    "CommutativeZeroMonoid[BigInt]",
+    SerializableTests.serializable(CommutativeZeroMonoid[BigInt]))
 
   checkAll("ZeroSemilattice[BitSet]", ZeroSemilatticeTests[BitSet].zeroSemilattice)
   checkAll("ZeroSemilattice[BitSet]", SerializableTests.serializable(ZeroSemilattice[BitSet]))
 
-  checkAll("ZeroMonoid[Byte]", ZeroMonoidTests[Byte].zeroMonoid)
-  checkAll("ZeroMonoid[Byte]", SerializableTests.serializable(ZeroMonoid[Byte]))
+  checkAll(
+    "CommutativeZeroMonoid[Byte]",
+    CommutativeZeroMonoidTests[Byte].commutativeZeroMonoid)
+  checkAll(
+    "CommutativeZeroMonoid[Byte]",
+    SerializableTests.serializable(CommutativeZeroMonoid[Byte]))
 
   checkAll("ZeroMonoid[() => Int]", ZeroMonoidTests[() => Int].zeroMonoid)
   checkAll("ZeroMonoid[() => Int]", SerializableTests.serializable(ZeroMonoid[() => Int]))
@@ -59,11 +68,24 @@ class LawTests extends Specification with Discipline with ScalaCheck {
   checkAll("ZeroMonoid[Byte => Int]", ZeroMonoidTests[Byte => Int].zeroMonoid)
   checkAll("ZeroMonoid[Byte => Int]", SerializableTests.serializable(ZeroMonoid[Int => Int]))
 
-  checkAll("ZeroMonoid[Int]", ZeroMonoidTests[Int].zeroMonoid)
-  checkAll("ZeroMonoid[Int]", SerializableTests.serializable(ZeroMonoid[Int]))
+  checkAll("CommutativeZeroMonoid[Int]", CommutativeZeroMonoidTests[Int].commutativeZeroMonoid)
+  checkAll(
+    "CommutativeZeroMonoid[Int]",
+    SerializableTests.serializable(CommutativeZeroMonoid[Int]))
 
-  checkAll("ZeroMonoid[Long]", ZeroMonoidTests[Long].zeroMonoid)
-  checkAll("ZeroMonoid[Long]", SerializableTests.serializable(ZeroMonoid[Long]))
+  checkAll(
+    "CommutativeZeroMonoid[Long]",
+    CommutativeZeroMonoidTests[Long].commutativeZeroMonoid)
+  checkAll(
+    "CommutativeZeroMonoid[Long]",
+    SerializableTests.serializable(CommutativeZeroMonoid[Long]))
+
+  checkAll(
+    "CommutativeZeroMonoid[Option]",
+    CommutativeZeroMonoidTests[Option[Int]].commutativeZeroMonoid)
+  checkAll(
+    "CommutativeZeroMonoid[Option]",
+    SerializableTests.serializable(CommutativeZeroMonoid[Option[Int]]))
 
   checkAll("ZeroSemilattice[Set]", ZeroSemilatticeTests[Set[String]].zeroSemilattice)
   checkAll("ZeroSemilattice[Set]", SerializableTests.serializable(ZeroSemilattice[Set[String]]))
@@ -75,8 +97,12 @@ class LawTests extends Specification with Discipline with ScalaCheck {
     "ZeroSemilattice[SortedSet]",
     SerializableTests.serializable(ZeroSemilattice[SortedSet[String]]))
 
-  checkAll("ZeroMonoid[Short]", ZeroMonoidTests[Short].zeroMonoid)
-  checkAll("ZeroMonoid[Short]", SerializableTests.serializable(ZeroMonoid[Short]))
+  checkAll(
+    "CommutativeZeroMonoid[Short]",
+    CommutativeZeroMonoidTests[Short].commutativeZeroMonoid)
+  checkAll(
+    "CommutativeZeroMonoid[Short]",
+    SerializableTests.serializable(CommutativeZeroMonoid[Short]))
 
   checkAll(
     "BoundedZeroSemilattice[Unit]",
