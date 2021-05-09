@@ -16,21 +16,4 @@
 
 package litter.instances
 
-object all extends AllInstances
-
-trait AllInstances
-    extends BigDecimalInstances
-    with BigIntInstances
-    with BitSetInstances
-    with ByteInstances
-    with DoubleInstances
-    with FloatInstances
-    with FunctionInstances
-    with IntInstances
-    with LongInstances
-    with OptionInstances
-    with SetInstances
-    with ShortInstances
-    with SortedSetInstances
-    with TupleInstances
-    with UnitInstances
+object tuple extends TupleInstances

@@ -105,6 +105,13 @@ class LawTests extends Specification with Discipline with ScalaCheck {
     SerializableTests.serializable(CommutativeZeroMonoid[Short]))
 
   checkAll(
+    "ZeroSemilattice[Tuple]",
+    ZeroSemilatticeTests[(Set[String], Set[String], Set[String])].zeroSemilattice)
+  checkAll(
+    "ZeroSemilattice[Tuple]",
+    SerializableTests.serializable(ZeroSemilattice[(Set[String], Set[String], Set[String])]))
+
+  checkAll(
     "BoundedZeroSemilattice[Unit]",
     BoundedZeroSemilatticeTests[Unit].boundedZeroSemilattice)
   checkAll(

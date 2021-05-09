@@ -39,6 +39,7 @@ lazy val core = project
       "org.typelevel" %% "cats-kernel" % CatsVersion
     )
   )
+  .enablePlugins(BoilerplatePlugin)
 
 lazy val laws = project
   .in(file("laws"))
