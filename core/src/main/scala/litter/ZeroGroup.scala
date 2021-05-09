@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package litterbox
+package litter
 
 import cats.kernel.Group
 

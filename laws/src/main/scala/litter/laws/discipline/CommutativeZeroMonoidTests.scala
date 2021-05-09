@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package litterbox.laws.discipline
+package litter.laws.discipline
 
 import cats.kernel.Eq
 import cats.kernel.laws.discipline.CommutativeMonoidTests
-import litterbox.CommutativeZeroMonoid
-import litterbox.laws.CommutativeZeroMonoidLaws
+import litter.CommutativeZeroMonoid
+import litter.laws.CommutativeZeroMonoidLaws
 import org.scalacheck.{Arbitrary, Prop}
 
 trait CommutativeZeroMonoidTests[A]

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package litterbox.laws
+package litter.laws
 
 import cats.kernel.laws.GroupLaws
-import litterbox.ZeroGroup
+import litter.ZeroGroup
 
 trait ZeroGroupLaws[A] extends GroupLaws[A] with ZeroMonoidLaws[A] {
   implicit override def S: ZeroGroup[A]

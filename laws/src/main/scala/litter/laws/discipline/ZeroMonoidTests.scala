@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package litterbox.laws.discipline
+package litter.laws.discipline
 
 import cats.kernel.Eq
 import cats.kernel.laws.discipline.MonoidTests
-import litterbox.ZeroMonoid
-import litterbox.laws.ZeroMonoidLaws
+import litter.ZeroMonoid
+import litter.laws.ZeroMonoidLaws
 import org.scalacheck.{Arbitrary, Prop}
 
 trait ZeroMonoidTests[A] extends MonoidTests[A] with ZeroSemigroupTests[A] {

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package litterbox.laws.discipline
+package litter.laws.discipline
 
 import cats.kernel.Eq
 import cats.kernel.laws.discipline.GroupTests
-import litterbox.ZeroGroup
-import litterbox.laws.ZeroGroupLaws
+import litter.ZeroGroup
+import litter.laws.ZeroGroupLaws
 import org.scalacheck.{Arbitrary, Prop}
 
 trait ZeroGroupTests[A] extends GroupTests[A] with ZeroMonoidTests[A] {

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package litterbox.laws.discipline
+package litter.laws.discipline
 
 import cats.kernel.Eq
 import cats.kernel.laws.discipline.CommutativeSemigroupTests
-import litterbox.CommutativeZeroSemigroup
-import litterbox.laws.CommutativeZeroSemigroupLaws
+import litter.CommutativeZeroSemigroup
+import litter.laws.CommutativeZeroSemigroupLaws
 import org.scalacheck.{Arbitrary, Prop}
 
 trait CommutativeZeroSemigroupTests[A]

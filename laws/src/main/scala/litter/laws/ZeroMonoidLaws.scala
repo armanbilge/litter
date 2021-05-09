@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package litterbox.laws
+package litter.laws
 
 import cats.kernel.laws.MonoidLaws
-import litterbox.ZeroMonoid
+import litter.ZeroMonoid
 
 trait ZeroMonoidLaws[A] extends MonoidLaws[A] with ZeroSemigroupLaws[A] {
   implicit override def S: ZeroMonoid[A]

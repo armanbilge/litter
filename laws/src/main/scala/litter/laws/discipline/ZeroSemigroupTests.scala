@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package litterbox.laws.discipline
+package litter.laws.discipline
 
 import cats.kernel.Eq
 import cats.kernel.laws.discipline.{SemigroupTests, _}
-import litterbox.ZeroSemigroup
-import litterbox.laws.ZeroSemigroupLaws
+import litter.ZeroSemigroup
+import litter.laws.ZeroSemigroupLaws
 import org.scalacheck.Arbitrary
 import org.scalacheck.Prop.forAll
 

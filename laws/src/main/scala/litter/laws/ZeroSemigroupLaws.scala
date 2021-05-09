@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package litterbox.laws
+package litter.laws
 
 import cats.kernel.Eq
 import cats.kernel.laws.{IsEq, IsEqArrow, SemigroupLaws}
-import litterbox.ZeroSemigroup
+import litter.ZeroSemigroup
 
 trait ZeroSemigroupLaws[A] extends SemigroupLaws[A] {
   implicit override def S: ZeroSemigroup[A]

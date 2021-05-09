@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package litterbox.laws
+package litter.laws
 
 import cats.kernel.laws.CommutativeMonoidLaws
-import litterbox.CommutativeZeroMonoid
+import litter.CommutativeZeroMonoid
 
 trait CommutativeZeroMonoidLaws[A]
     extends CommutativeMonoidLaws[A]

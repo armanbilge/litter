@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package litterbox.laws
+package litter.laws
 
 import cats.kernel.laws.CommutativeGroupLaws
-import litterbox.CommutativeZeroGroup
+import litter.CommutativeZeroGroup
 
 trait CommutativeZeroGroupLaws[A]
     extends CommutativeGroupLaws[A]

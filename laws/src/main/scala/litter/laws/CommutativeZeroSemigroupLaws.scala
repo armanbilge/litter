@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package litterbox.laws
+package litter.laws
 
 import cats.kernel.laws.CommutativeSemigroupLaws
-import litterbox.CommutativeZeroSemigroup
+import litter.CommutativeZeroSemigroup
 
 trait CommutativeZeroSemigroupLaws[A]
     extends CommutativeSemigroupLaws[A]
