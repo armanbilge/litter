@@ -24,7 +24,7 @@ import scala.{specialized => sp}
  * A zero semigroup is a semigroup with an absorbing element. A zero semigroup is a specialization of a
  * semigroup, so its operation must be associative. Additionally,
  * `combine(x, absorbing) == combine(absorbing, x) == absorbing`. For example, if we have `ZeroSemigroup[Int]`,
- * with `combine` as integer multiplication, then `absorbing = 0`.
+ * with `combine` as integer multiplication, then `absorbing == 0`.
  */
 trait ZeroSemigroup[@sp(Int, Long, Float, Double) A] extends Any with Semigroup[A] { self =>
 

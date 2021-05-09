@@ -23,10 +23,10 @@ import litter.ZeroSemigroup
 trait ZeroSemigroupLaws[A] extends SemigroupLaws[A] {
   implicit override def S: ZeroSemigroup[A]
 
-  def leftAbsorbtion(x: A): IsEq[A] =
+  def leftAbsorption(x: A): IsEq[A] =
     S.combine(S.absorbing, x) <-> x
 
-  def rightAbsorbtion(x: A): IsEq[A] =
+  def rightAbsorption(x: A): IsEq[A] =
     S.combine(x, S.absorbing) <-> x
 
   def isAbsorbing(x: A, eqv: Eq[A]): IsEq[Boolean] =

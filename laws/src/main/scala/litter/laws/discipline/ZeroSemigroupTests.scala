@@ -31,8 +31,8 @@ trait ZeroSemigroupTests[A] extends SemigroupTests[A] {
     new DefaultRuleSet(
       "zeroSemigroup",
       Some(semigroup),
-      "left absorbtion" -> forAll(laws.leftAbsorbtion _),
-      "right absorbtion" -> forAll(laws.rightAbsorbtion _),
+      "left absorption" -> forAll(laws.leftAbsorption _),
+      "right absorption" -> forAll(laws.rightAbsorption _),
       "isAbsorbing" -> forAll((a: A) => laws.isAbsorbing(a, eqA))
     )
 }
