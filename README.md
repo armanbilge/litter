@@ -14,3 +14,10 @@ The complete list of type classes introduced is:
 * `ZeroBand`
 * `ZeroSemilattice`
 * `BoundedZeroSemilattice`
+
+## Usage
+
+```scala
+libraryDependencies += "com.armanbilge" %% "litter" % "0.1.0"
+libraryDependencies += "com.armanbilge" %% "litter-laws" % "0.1.0" % Test
+```
