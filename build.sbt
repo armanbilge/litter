@@ -13,8 +13,10 @@ ThisBuild / scmInfo := Some(
   ScmInfo(url("https://github.com/armanbilge/litter"), "git@github.com:armanbilge/litter.git"))
 sonatypeCredentialHost := "s01.oss.sonatype.org"
 
+val Scala212 = "2.12.13"
 val Scala213 = "2.13.5"
-ThisBuild / crossScalaVersions := Seq("3.0.0-RC2", "3.0.0-RC3", "2.12.13", Scala213)
+val Scala3 = "3.0.0"
+ThisBuild / crossScalaVersions := Seq(Scala212, Scala213, Scala3)
 
 replaceCommandAlias(
   "ci",
@@ -22,10 +24,10 @@ replaceCommandAlias(
 )
 addCommandAlias("prePR", "; root/clean; +root/scalafmtAll; scalafmtSbt; +root/headerCreate")
 
-val CatsVersion = "2.6.0"
+val CatsVersion = "2.6.1"
 val Specs2Version = "4.11.0"
 val ScalaCheckVersion = "1.15.3"
-val DisciplineVersion = "1.1.5"
+val DisciplineVersion = "1.1.6"
 
 lazy val root =
   project.aggregate(core, laws).enablePlugins(NoPublishPlugin)
