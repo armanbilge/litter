@@ -16,7 +16,7 @@
 
 package litter
 
-import cats.kernel.Group
+import cats.kernel.{Group, GroupFunctions}
 
 import scala.{specialized => sp}
 
@@ -25,12 +25,14 @@ import scala.{specialized => sp}
  */
 trait ZeroGroup[@sp(Int, Long, Float, Double) A] extends Any with Group[A] with ZeroMonoid[A]
 
-// TODO Extend from GroupFunctions when next version of Cats released
-trait ZeroGroupFunctions[G[T] <: ZeroGroup[T]] extends ZeroMonoidFunctions[G] {
-  def inverse[@sp(Int, Long, Float, Double) A](a: A)(implicit ev: G[A]): A =
+// TODO Drop overrides in next binary-breaking release
+trait ZeroGroupFunctions[G[T] <: ZeroGroup[T]]
+    extends GroupFunctions[G]
+    with ZeroMonoidFunctions[G] {
+  override def inverse[@sp(Int, Long, Float, Double) A](a: A)(implicit ev: G[A]): A =
     ev.inverse(a)
 
-  def remove[@sp(Int, Long, Float, Double) A](x: A, y: A)(implicit ev: G[A]): A =
+  override def remove[@sp(Int, Long, Float, Double) A](x: A, y: A)(implicit ev: G[A]): A =
     ev.remove(x, y)
 }
 
