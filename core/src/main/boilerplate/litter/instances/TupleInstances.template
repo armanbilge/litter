@@ -1,0 +1,119 @@
+/*
+ * Copyright 2021 Arman Bilge
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package litter.instances
+
+import litter.{
+  BoundedZeroSemilattice,
+  CommutativeZeroGroup,
+  CommutativeZeroMonoid,
+  CommutativeZeroSemigroup,
+  ZeroBand,
+  ZeroGroup,
+  ZeroMonoid,
+  ZeroSemigroup,
+  ZeroSemilattice
+}
+
+trait TupleInstances extends TupleInstances0 {
+  [#implicit def litterInstancesCommutativeZeroGroupForTuple1[[#A1#]](implicit [#A1: CommutativeZeroGroup[A1]#]): CommutativeZeroGroup[Tuple1[[#A1#]]] =
+    new CommutativeZeroGroup[Tuple1[[#A1#]]] {
+      override def inverse(a: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.inverse(a._1)#])
+      override def remove(a: Tuple1[[#A1#]], b: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.remove(a._1, b._1)#])
+      override def empty: Tuple1[[#A1#]] = Tuple1([#A1.empty#])
+      override def absorbing: Tuple1[[#A1#]] = Tuple1([#A1.absorbing#])
+      override def combine(x: Tuple1[[#A1#]], y: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.combine(x._1, y._1)#])
+    }#
+  ]
+}
+
+trait TupleInstances0 extends TupleInstances1 {
+  [#implicit def litterInstancesZeroGroupForTuple1[[#A1#]](implicit [#A1: ZeroGroup[A1]#]): ZeroGroup[Tuple1[[#A1#]]] =
+    new ZeroGroup[Tuple1[[#A1#]]] {
+      override def inverse(a: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.inverse(a._1)#])
+      override def remove(a: Tuple1[[#A1#]], b: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.remove(a._1, b._1)#])
+      override def empty: Tuple1[[#A1#]] = Tuple1([#A1.empty#])
+      override def absorbing: Tuple1[[#A1#]] = Tuple1([#A1.absorbing#])
+      override def combine(x: Tuple1[[#A1#]], y: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.combine(x._1, y._1)#])
+    }#
+  ]
+}
+
+trait TupleInstances1 extends TupleInstances2 {
+  [#implicit def litterInstancesBoundedZeroSemilatticeForTuple1[[#A1#]](implicit [#A1: BoundedZeroSemilattice[A1]#]): BoundedZeroSemilattice[Tuple1[[#A1#]]] =
+    new BoundedZeroSemilattice[Tuple1[[#A1#]]] {
+      override def empty: Tuple1[[#A1#]] = Tuple1([#A1.empty#])
+      override def absorbing: Tuple1[[#A1#]] = Tuple1([#A1.absorbing#])
+      override def combine(x: Tuple1[[#A1#]], y: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.combine(x._1, y._1)#])
+    }#
+  ]
+}
+
+trait TupleInstances2 extends TupleInstances3 {
+  [#implicit def litterInstancesCommutativeZeroMonoidForTuple1[[#A1#]](implicit [#A1: CommutativeZeroMonoid[A1]#]): CommutativeZeroMonoid[Tuple1[[#A1#]]] =
+    new CommutativeZeroMonoid[Tuple1[[#A1#]]] {
+      override def empty: Tuple1[[#A1#]] = Tuple1([#A1.empty#])
+      override def absorbing: Tuple1[[#A1#]] = Tuple1([#A1.absorbing#])
+      override def combine(x: Tuple1[[#A1#]], y: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.combine(x._1, y._1)#])
+    }#
+  ]
+}
+
+trait TupleInstances3 extends TupleInstances4 {
+  [#implicit def litterInstancesZeroMonoidForTuple1[[#A1#]](implicit [#A1: ZeroMonoid[A1]#]): ZeroMonoid[Tuple1[[#A1#]]] =
+    new ZeroMonoid[Tuple1[[#A1#]]] {
+      override def empty: Tuple1[[#A1#]] = Tuple1([#A1.empty#])
+      override def absorbing: Tuple1[[#A1#]] = Tuple1([#A1.absorbing#])
+      override def combine(x: Tuple1[[#A1#]], y: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.combine(x._1, y._1)#])
+    }#
+  ]
+}
+
+trait TupleInstances4 extends TupleInstances5 {
+  [#implicit def litterInstancesZeroSemilatticeForTuple1[[#A1#]](implicit [#A1: ZeroSemilattice[A1]#]): ZeroSemilattice[Tuple1[[#A1#]]] =
+    new ZeroSemilattice[Tuple1[[#A1#]]] {
+      override def absorbing: Tuple1[[#A1#]] = Tuple1([#A1.absorbing#])
+      override def combine(x: Tuple1[[#A1#]], y: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.combine(x._1, y._1)#])
+    }#
+  ]
+}
+
+trait TupleInstances5 extends TupleInstances6 {
+  [#implicit def litterInstancesCommutativeZeroSemigroupForTuple1[[#A1#]](implicit [#A1: CommutativeZeroSemigroup[A1]#]): CommutativeZeroSemigroup[Tuple1[[#A1#]]] =
+    new CommutativeZeroSemigroup[Tuple1[[#A1#]]] {
+      override def absorbing: Tuple1[[#A1#]] = Tuple1([#A1.absorbing#])
+      override def combine(x: Tuple1[[#A1#]], y: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.combine(x._1, y._1)#])
+    }#
+  ]
+}
+
+trait TupleInstances6 extends TupleInstances7 {
+  [#implicit def litterInstancesZeroBandForTuple1[[#A1#]](implicit [#A1: ZeroBand[A1]#]): ZeroBand[Tuple1[[#A1#]]] =
+    new ZeroBand[Tuple1[[#A1#]]] {
+      override def absorbing: Tuple1[[#A1#]] = Tuple1([#A1.absorbing#])
+      override def combine(x: Tuple1[[#A1#]], y: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.combine(x._1, y._1)#])
+    }#
+  ]
+}
+
+trait TupleInstances7 {
+  [#implicit def litterInstancesZeroSemigroupForTuple1[[#A1#]](implicit [#A1: ZeroSemigroup[A1]#]): ZeroSemigroup[Tuple1[[#A1#]]] =
+    new ZeroSemigroup[Tuple1[[#A1#]]] {
+      override def absorbing: Tuple1[[#A1#]] = Tuple1([#A1.absorbing#])
+      override def combine(x: Tuple1[[#A1#]], y: Tuple1[[#A1#]]): Tuple1[[#A1#]] = Tuple1([#A1.combine(x._1, y._1)#])
+    }#
+  ]
+}
