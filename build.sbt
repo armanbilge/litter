@@ -13,7 +13,7 @@ ThisBuild / scmInfo := Some(
   ScmInfo(url("https://github.com/armanbilge/litter"), "git@github.com:armanbilge/litter.git"))
 sonatypeCredentialHost := "s01.oss.sonatype.org"
 
-val Scala212 = "2.12.13"
+val Scala212 = "2.12.14"
 val Scala213 = "2.13.6"
 val Scala3 = "3.0.0"
 ThisBuild / crossScalaVersions := Seq(Scala212, Scala213, Scala3)
