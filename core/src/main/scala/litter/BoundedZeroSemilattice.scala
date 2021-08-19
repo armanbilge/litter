@@ -21,8 +21,8 @@ import cats.kernel.BoundedSemilattice
 import scala.{specialized => sp}
 
 /**
- * Bounded zero semilattices are bounded semilattices with an absorbing element that
- * satisfies `combine(x, absorbing) == combine(absorbing, x) == absorbing`.
+ * Bounded zero semilattices are bounded semilattices with an absorbing element that satisfies
+ * `combine(x, absorbing) == combine(absorbing, x) == absorbing`.
  */
 trait BoundedZeroSemilattice[@sp(Int, Long, Float, Double) A]
     extends Any
@@ -40,7 +40,8 @@ object BoundedZeroSemilattice extends ZeroSemilatticeFunctions[BoundedZeroSemila
     ev
 
   /**
-   * Create a `BoundedZeroSemilattice` instance from the given function and empty and absorbing values.
+   * Create a `BoundedZeroSemilattice` instance from the given function and empty and absorbing
+   * values.
    */
   @inline def instance[A](
       emptyValue: A,
