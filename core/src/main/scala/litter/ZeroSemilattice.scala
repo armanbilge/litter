@@ -21,8 +21,8 @@ import cats.kernel.{Semilattice, SemilatticeFunctions}
 import scala.{specialized => sp}
 
 /**
- * Zero semilattices are semilattices with an absorbing element that
- * satisfies `combine(x, absorbing) == combine(absorbing, x) == absorbing`.
+ * Zero semilattices are semilattices with an absorbing element that satisfies `combine(x,
+ * absorbing) == combine(absorbing, x) == absorbing`.
  */
 trait ZeroSemilattice[@sp(Int, Long, Float, Double) A]
     extends Any
