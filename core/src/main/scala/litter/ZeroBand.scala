@@ -21,8 +21,8 @@ import cats.kernel.Band
 import scala.{specialized => sp}
 
 /**
- * Zero bands are bands with an absorbing element that satisfies
- * `combine(x, absorbing) == combine(absorbing, x) == absorbing`.
+ * Zero bands are bands with an absorbing element that satisfies `combine(x, absorbing) ==
+ * combine(absorbing, x) == absorbing`.
  */
 trait ZeroBand[@sp(Int, Long, Float, Double) A] extends Any with Band[A] with ZeroSemigroup[A]
 

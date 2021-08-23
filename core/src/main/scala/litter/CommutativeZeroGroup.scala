@@ -21,8 +21,8 @@ import cats.kernel.CommutativeGroup
 import scala.{specialized => sp}
 
 /**
- * A commutative zero group is a commutative group with an absorbing element
- * that satisfies `combine(x, absorbing) == combine(absorbing, x) == absorbing`.
+ * A commutative zero group is a commutative group with an absorbing element that satisfies
+ * `combine(x, absorbing) == combine(absorbing, x) == absorbing`.
  */
 trait CommutativeZeroGroup[@sp(Int, Long, Float, Double) A]
     extends Any
